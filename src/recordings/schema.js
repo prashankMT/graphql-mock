@@ -21,10 +21,13 @@ const typeDefs = `
     participants(count: Int=10, cursor: Int, query: String): Participants
     comments(count: Int=10, cursor: Int, recordingId: Int!): Comments 
     recordings(count: Int=10, categoryId: Int, libraryId: [Int], accountId: [Int!], themeId: [Int!], particpantId: [Int!], count: Int=10, cursor: Int): Recordings
+    recording(id: ID):Recording
+    users(query: String!, count: Int=10): Users
   }
 
   # this schema allows the following mutation:
   extend type Mutation {
+    deleteSharingWithUser(recordingId: ID!, userId: ID!): Recording
   }
 `;
 

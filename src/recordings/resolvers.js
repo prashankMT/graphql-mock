@@ -16,6 +16,9 @@ const rootResolvers = {
     }),
     participants: (_, { count }) => ({
       data: () => new MockList([1, count])
+    }),
+    users: (_, {count}) => ({
+      data: () => new MockList([1, count])
     })
   },
   Mutation: {}
