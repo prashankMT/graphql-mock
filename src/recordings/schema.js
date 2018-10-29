@@ -28,6 +28,7 @@ const typeDefs = `
   # this schema allows the following mutation:
   extend type Mutation {
     deleteSharingWithUser(recordingId: ID!, userId: ID!): Recording
+    shareRecordings(recordingId: ID!, users: [ID]!): Recording
   }
 `;
 
