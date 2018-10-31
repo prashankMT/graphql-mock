@@ -14,13 +14,17 @@ export default {
   }),
   User:()=>({
     name: casual.name,
-    email: casual.email
+    email: casual.email,
+    pic: casual.url
   }),
   Account:()=>({
     name: casual.company_name
   }),
   Reaction:()=>({
     type: casual.type
+  }),
+  Recording:()=>({
+    sharedWith: () => new MockList([3, 10])
   })
 
 };

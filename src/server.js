@@ -28,6 +28,13 @@ server.use(
   })
 );
 
+server.use(
+  '/',
+  function (req, res) {
+    return res.redirect(302, '/graphiql')
+  }
+)
+
 server.listen(PORT, () => {
   console.log(
     `GraphQL Server is now running on http://localhost:${PORT}/graphql`
