@@ -12,6 +12,8 @@ const typeDefs = `
   # the schema allows the following query:
   extend type Query {
     theme(id: Int!): Theme
+    company(domain: String!): Company
+    user: User   
     account(id: Int!): Account
     categories: [Category]
     themes(count: Int=10, cursor: Int, query: String): Themes
@@ -20,15 +22,15 @@ const typeDefs = `
     libraries(count: Int=10, cursor: Int): Libraries
     participants(count: Int=10, cursor: Int, query: String): Participants
     comments(count: Int=10, cursor: Int, recordingId: Int!): Comments 
-    recordings(count: Int=10, categoryId: Int, libraryId: [Int], accountId: [Int!], themeId: [Int!], particpantId: [Int!], count: Int=10, cursor: Int): Recordings
+    recordings(count: Int=10, categoryId: Int, libraryId: [Int], accounts: [Int!], themes: [Int!], particpants: [Int!], count: Int=10, cursor: Int): Recordings    
     recording(id: ID):Recording
     users(query: String!, count: Int=10): Users
   }
 
   # this schema allows the following mutation:
   extend type Mutation {
-    deleteSharingWithUser(recordingId: ID!, userId: ID!): Recording
-    shareRecordings(recordingId: ID!, users: [ID]!): Recording
+    updateShareRecordings(recordingId: ID!, addedUsers: [ID], deletedUsers: [ID]): Recording
+    changeLocale: Account
   }
 `;
 

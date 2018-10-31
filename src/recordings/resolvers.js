@@ -19,6 +19,9 @@ const rootResolvers = {
     }),
     users: (_, {count}) => ({
       data: () => new MockList([1, count])
+    }),
+    recordings: (_, { count }) => ({
+      data: () => new MockList([1, count])
     })
   },
   Mutation: {}
