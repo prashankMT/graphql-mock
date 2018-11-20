@@ -1,4 +1,7 @@
 import Recording from "./components/recording";
+import Transcription from "./components/transcription";
+import Questions from "./components/questions";
+import Talktime from "./components/talktime";
 import Category from "./components/category";
 import Library from "./components/library";
 import User from "./components/user";
@@ -45,5 +48,8 @@ export default [
   Accounts,
   Comments,
   User,
-  Reaction
+  Reaction,
+  Transcription,
+  Talktime,
+  Questions
 ];

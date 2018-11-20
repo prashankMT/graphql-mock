@@ -14,6 +14,10 @@ export default `
     libraries: [Library]
     hasNewComment: Boolean!
     hasNewReaction: Boolean!
+    transcription: [Transcription]
+    questions: QuestionsAsked
+    talktime: TalkTime
+    interchanges: Int!
   }
   type Recordings {
     cursor: Int!

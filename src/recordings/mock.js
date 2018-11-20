@@ -13,6 +13,9 @@ export default {
   Comment: ()=>({
     text: casual.text
   }),
+  Transcription: ()=>({
+    text: casual.text
+  }),
   User:()=>({
     name: casual.name,
     email: casual.email,
