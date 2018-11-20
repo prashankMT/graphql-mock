@@ -1,6 +1,6 @@
 export default `
   type Recording {
-    id: Int!
+    id: ID!
     title: String!
     account: Account!
     sharedWith: [User]

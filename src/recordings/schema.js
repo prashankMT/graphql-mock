@@ -19,7 +19,7 @@ const typeDefs = `
     themes(count: Int=10, cursor: Int, query: String): Themes
     accounts(count: Int=10, cursor: Int, query: String): Accounts
     topLibraries: [Library]
-    libraries(count: Int=10, cursor: Int): Libraries
+    libraries(count: Int=10, cursor: Int, query: String): Libraries
     participants(count: Int=10, cursor: Int, query: String): Participants
     comments(count: Int=10, cursor: Int, recordingId: Int!): Comments 
     recordings(count: Int=10, categoryId: Int, libraryId: [Int], accounts: [Int!], themes: [Int!], particpants: [Int!], count: Int=10, cursor: Int): Recordings    
@@ -30,6 +30,7 @@ const typeDefs = `
   # this schema allows the following mutation:
   extend type Mutation {
     updateShareRecordings(recordingId: ID!, addedUsers: [ID], deletedUsers: [ID]): Recording
+    updateRecordingsLibrary(recordingId: ID!, addedLibraries: [ID], deletedLibraries: [ID]): Recording
     changeLocale: Account
   }
 `;

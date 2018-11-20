@@ -22,6 +22,9 @@ const rootResolvers = {
     }),
     recordings: (_, { count }) => ({
       data: () => new MockList([1, count])
+    }),
+    libraries: (_, {count}) => ({
+      data: () => new MockList([1, count])
     })
   },
   Mutation: {}
