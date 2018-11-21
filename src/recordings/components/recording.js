@@ -4,7 +4,7 @@ export default `
     title: String!
     account: Account!
     sharedWith: [User]
-    themes: [Theme]
+    themes: [RecordingThemes]
     duration: Int!
     isBookmarked: Boolean!
     comments: [Comment]
@@ -18,6 +18,7 @@ export default `
     questions: QuestionsAsked
     talktime: TalkTime
     interchanges: Int!
+
   }
   type Recordings {
     cursor: Int!
