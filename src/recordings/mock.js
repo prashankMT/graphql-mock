@@ -11,7 +11,8 @@ export default {
     name: casual._full_name
   }),
   Comment: ()=>({
-    text: casual.text
+    text: casual.text,
+    postedOn: casual.unix_time
   }),
   Transcription: ()=>({
     text: casual.text
@@ -29,7 +30,7 @@ export default {
   }),
   Recording:()=>({
     sharedWith: () => new MockList([3, 10]),
-    libraries: () => new MockList([2, 10])
+    libraries: () => new MockList([2, 50])
   })
 
 };

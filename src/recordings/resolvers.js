@@ -4,7 +4,7 @@ import { categories, libraries } from "./dataSource";
 const rootResolvers = {
   Query: {
     categories: () => categories,
-    topLibraries: () => libraries.slice(0, 4),
+    topLibraries: () => libraries.slice(0, 40),
     accounts: (_, { count }) => ({
       data: () => new MockList([1, count])
     }),

@@ -49,6 +49,38 @@ const libraries = [
   {
     id: 8,
     name: "Onboarding"
+  },
+  {
+    id: 10,
+    name: "Modules"
+  },
+  {
+    id: 20,
+    name: "Driving Negotiations"
+  },
+  {
+    id: 30,
+    name: "Full Platform Sales"
+  },
+  {
+    id: 40,
+    name: "Onboarding"
+  },
+  {
+    id: 50,
+    name: "Modules"
+  },
+  {
+    id: 60,
+    name: "Driving Negotiations"
+  },
+  {
+    id: 70,
+    name: "Full Platform Sales"
+  },
+  {
+    id: 80,
+    name: "Onboarding"
   }
 ];
 
