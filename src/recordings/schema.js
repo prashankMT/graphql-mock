@@ -25,7 +25,7 @@ const typeDefs = `
     libraries(count: Int=10, cursor: Int, query: String): Libraries
     participants(count: Int=10, cursor: Int, query: String): Participants
     comments(count: Int=10, cursor: Int, recordingId: Int!): Comments 
-    recordings(count: Int=10, categoryId: Int, libraryId: [Int], accounts: [Int!], themes: [Int!], particpants: [Int!], count: Int=10, cursor: Int, date: [String!], query: [String!], sortBy: String): Recordings    
+    recordings(count: Int=10, categoryId: Int, libraryId: [Int], accounts: [Int!], themes: [Int!], particpants: [Int!], count: Int=10, cursor: Int, date: [String!], query: [String!], sortType: String, sortOrder: String): Recordings    
     recording(id: ID):Recording
     users(query: String!, count: Int=10): Users
   }
