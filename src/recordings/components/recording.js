@@ -1,4 +1,9 @@
 export default `
+  type SpeakingEvent{
+    start: Int!
+    end: Int
+    speaker: User
+  }
   type Recording {
     id: ID!
     title: String!
@@ -11,14 +16,14 @@ export default `
     date: Int!
     reactions: [Reaction]
     isNew: Boolean!
-    libraries: [Library]
     hasNewComment: Boolean!
     hasNewReaction: Boolean!
     transcription: [Transcription]
     questions: QuestionsAsked
     talktime: TalkTime
     interchanges: Int!
-
+    libraries: [Library]
+    speakerEvents: [SpeakingEvent]
   }
   type Recordings {
     cursor: Int!
