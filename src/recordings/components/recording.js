@@ -28,6 +28,7 @@ export default `
   type Recordings {
     cursor: Int!
     total: Int!
+    hasMore: Boolean!
     data: [Recording]
   }
 `;

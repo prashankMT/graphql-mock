@@ -1,6 +1,6 @@
 export default `
   type Theme {
-    id: Int!
+    id: String!
     name: String!
     keywords: [Keyword]
   }
@@ -14,7 +14,7 @@ export default `
     data: [Theme]
   }
   type Keyword {
-    id: Int!
+    id: String!
     name: String!
   }
 

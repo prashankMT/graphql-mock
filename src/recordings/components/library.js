@@ -1,9 +1,10 @@
 export default `
   type Library {
-    id: Int!
+    id: String!
     name: String!
     count: Int!
     hasNew: Boolean!
+    description: String!
   }
   type Libraries {
     cursor: Int!

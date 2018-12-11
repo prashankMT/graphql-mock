@@ -10,7 +10,8 @@ export default {
   Int: () => casual.integer(0),
   String: () => casual.title,
   Library: () => ({
-    name: casual._full_name
+    name: casual._full_name,
+    description: casual.text
   }),
   Comment: () => ({
     text: casual.text,
@@ -32,9 +33,11 @@ export default {
   }),
   Recording: () => ({
     sharedWith: () => new MockList([3, 10]),
-    libraries: () => new MockList([2, 50]),
+    libraries: () => new MockList([3, 10]),
+    themes: () => new MockList([3, 10]),
     date: casual._unix_time,
     duration: 100,
+    hasMore: true,
     speakerEvents: () => speakerEvents
   })
 };
