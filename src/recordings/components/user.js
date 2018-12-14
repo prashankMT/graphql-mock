@@ -12,6 +12,7 @@ export default `
   type Users {
     cursor: Int!
     total: Int!
+    hasMore: Boolean!
     data: [User]
   }
   type Company {

@@ -18,13 +18,16 @@ const rootResolvers = {
       data: () => new MockList([1, count])
     }),
     users: (_, {count}) => ({
-      data: () => new MockList([1, count])
+      data: () => new MockList([5, count])
     }),
     recordings: (_, { count }) => ({
-      data: () => new MockList([1, count])
+      data: () => new MockList([10, 20])
     }),
     libraries: (_, {count}) => ({
       data: () => new MockList([1, count])
+    }),
+    comments: (_, {count}) => ({
+      data: () => new MockList([6, 20])
     })
   },
   Mutation: {}

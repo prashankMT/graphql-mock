@@ -23,7 +23,7 @@ export default {
   User: () => ({
     name: casual.name,
     email: casual.email,
-    pic: casual.url
+    pic: "https://t2.rbxcdn.com/1f61c439026a7958ca0a83b36b901a13"
   }),
   Account: () => ({
     name: casual.company_name
@@ -35,6 +35,7 @@ export default {
     sharedWith: () => new MockList([3, 10]),
     libraries: () => new MockList([3, 10]),
     themes: () => new MockList([3, 10]),
+    transcription: ()=> new MockList([5, 20]),
     date: casual._unix_time,
     duration: 100,
     hasMore: true,
