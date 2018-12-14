@@ -6,7 +6,9 @@ export default `
     designation: String!
     recordings: [Recording]
     pic: String
-    manager: User
+    manager: User,
+    isTeam: Boolean!
+    isProspect: Boolean!
   }
 
   type Users {

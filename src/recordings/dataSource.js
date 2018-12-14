@@ -87,33 +87,33 @@ const libraries = [
 const speakerEvents = [
   {
     speaker: {
-      name: "team"
+      tag: "team"
     },
     start: 0,
     end: 20
   },
   {
-    speaker: { name: "others" },
+    speaker: { tag: "others" },
     start: 30,
     end: 60
   },
   {
-    speaker: { name: "team" },
+    speaker: { tag: "team" },
     start: 40,
     end: 50
   },
   {
-    speaker: { name: "others" },
+    speaker: { tag: "others" },
     start: 15,
     end: 25
   },
   {
-    speaker: { name: "others" },
+    speaker: { tag: "others" },
     start: 80,
     end: 100
   },
   {
-    speaker: { name: "team" },
+    speaker: { tag: "team" },
     start: 60,
     end: 70
   }
