@@ -21,7 +21,7 @@ const rootResolvers = {
       data: () => new MockList([5, count])
     }),
     recordings: (_, { count }) => ({
-      data: () => new MockList([10, 20])
+      data: () => new MockList([8, 10])
     }),
     libraries: (_, {count}) => ({
       data: () => new MockList([1, count])

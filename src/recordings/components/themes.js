@@ -11,6 +11,7 @@ export default `
   }
   type Themes {
     cursor: Int!
+    hasMore: Boolean!
     data: [Theme]
   }
   type Keyword {

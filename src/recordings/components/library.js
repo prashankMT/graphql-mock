@@ -8,6 +8,7 @@ export default `
   }
   type Libraries {
     cursor: Int!
+    hasMore: Boolean!
     data: [Library]
   }
 `;
