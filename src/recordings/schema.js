@@ -34,6 +34,9 @@ const typeDefs = `
   extend type Mutation {
     updateShareRecordings(recordingId: ID!, addedUsers: [ID], deletedUsers: [ID]): Recording
     updateRecordingsLibrary(recordingId: ID!, addedLibraries: [ID], deletedLibraries: [ID]): Recording
+    addTheme(title: String!, keywords: [String!]!): Theme
+    editTheme(id: ID!, title: String!, keywords: [String!]!): Theme
+    deleteTheme(id: ID!): Theme
     changeLocale: Account
   }
 `;
