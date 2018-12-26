@@ -6,4 +6,4 @@ const server = new ApolloServer({
   schema
 })
 
-server.listen().then(({url}) => console.log(`Started at url ${url}`));
+server.listen(PORT).then(({url}) => console.log(`Started at url ${url}`));
