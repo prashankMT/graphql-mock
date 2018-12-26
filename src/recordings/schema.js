@@ -1,3 +1,5 @@
+import {gql} from 'apollo-server'
+
 import Recording from "./components/recording";
 import Transcription from "./components/transcription";
 import Questions from "./components/questions";
@@ -11,7 +13,7 @@ import Themes from "./components/themes";
 import Comments from "./components/comment";
 import Reaction from "./components/reaction";
 
-const typeDefs = `
+const typeDefs = gql`
   # the schema allows the following query:
   extend type Query {
     theme(id: Int!): Theme
@@ -43,16 +45,16 @@ const typeDefs = `
 
 export default [
   typeDefs,
-  Recording,
-  Category,
-  Library,
-  Themes,
-  Participants,
-  Accounts,
-  Comments,
-  User,
-  Reaction,
-  Transcription,
-  Talktime,
-  Questions
+  gql`${Recording}`,
+  gql`${Category}`,
+  gql`${Library}`,
+  gql`${Themes}`,
+  gql`${Participants}`,
+  gql`${Accounts}`,
+  gql`${Comments}`,
+  gql`${User}`,
+  gql`${Reaction}`,
+  gql`${Transcription}`,
+  gql`${Talktime}`,
+  gql`${Questions}`
 ];
