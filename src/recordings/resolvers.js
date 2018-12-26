@@ -28,6 +28,9 @@ const rootResolvers = {
     }),
     comments: (_, {count}) => ({
       data: () => new MockList([6, 20])
+    }),
+    notifications: (_, {count}) => ({
+      data: () => new MockList([1, count])
     })
   },
   Mutation: {}

@@ -10,6 +10,7 @@ import Participants from "./components/participants";
 import Themes from "./components/themes";
 import Comments from "./components/comment";
 import Reaction from "./components/reaction";
+import Notification from "./components/notification";
 
 const typeDefs = `
   # the schema allows the following query:
@@ -28,6 +29,7 @@ const typeDefs = `
     recordings(count: Int=10, categoryId: Int, libraryId: [Int], accounts: [Int!], themes: [Int!], particpants: [Int!], count: Int=10, cursor: Int, date: [String!], query: [String!], sortType: String, sortOrder: String): Recordings    
     recording(id: String!):Recording
     users(query: String, count: Int=10): Users
+    notifications(cursor: Int, count: Int=10): Notifications
   }
 
   # this schema allows the following mutation:
@@ -37,7 +39,8 @@ const typeDefs = `
     addTheme(title: String!, keywords: [String!]!): Theme
     editTheme(id: ID!, title: String!, keywords: [String!]!): Theme
     deleteTheme(id: ID!): Theme
-    changeLocale: Account
+    changeLocale: Account,
+    markNotificationAsRead(ids: [ID]): Notifications
   }
 `;
 
@@ -54,5 +57,6 @@ export default [
   Reaction,
   Transcription,
   Talktime,
-  Questions
+  Questions,
+  Notification
 ];
