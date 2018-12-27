@@ -40,5 +40,10 @@ export default {
     duration: 100,
     hasMore: true,
     speakerEvents: () => speakerEvents
+  }),
+  Notification: () => ({
+    date: casual.unix_time,
+    text: casual.description,
+    image: 'https://t2.rbxcdn.com/1f61c439026a7958ca0a83b36b901a13'
   })
 };

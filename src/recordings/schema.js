@@ -1,3 +1,5 @@
+import {gql} from 'apollo-server'
+
 import Recording from "./components/recording";
 import Transcription from "./components/transcription";
 import Questions from "./components/questions";
@@ -11,8 +13,10 @@ import Themes from "./components/themes";
 import Comments from "./components/comment";
 import Reaction from "./components/reaction";
 import Departments from "./components/departments";
+import Notification from "./components/notification";
+import Empty from "./components/empty";
 
-const typeDefs = `
+const typeDefs = gql`
   # the schema allows the following query:
   extend type Query {
     theme(id: Int!): Theme
@@ -30,29 +34,40 @@ const typeDefs = `
     recording(id: String!):Recording
     users(query: String, count: Int=10, cursor: Int,): Users
     departments(query: String, count: Int=10, cursor: Int,): Departments 
+    notifications(cursor: Int, count: Int=10): Notifications
   }
 
   # this schema allows the following mutation:
   extend type Mutation {
     updateShareRecordings(recordingId: ID!, addedUsers: [ID], deletedUsers: [ID]): Recording
     updateRecordingsLibrary(recordingId: ID!, addedLibraries: [ID], deletedLibraries: [ID]): Recording
-    changeLocale: Account
+    addTheme(title: String!, keywords: [String!]!): Theme
+    editTheme(id: ID!, title: String!, keywords: [String!]!): Theme
+    deleteTheme(id: ID!): Theme
+    changeLocale: Account,
+    markNotificationAsRead(ids: [ID]): Notifications
+  }
+
+  type Subscription {
+    newNotificationRecieved: ID
   }
 `;
 
 export default [
   typeDefs,
-  Recording,
-  Category,
-  Library,
-  Themes,
-  Participants,
-  Accounts,
-  Comments,
-  User,
-  Reaction,
-  Transcription,
-  Talktime,
-  Questions,
-  Departments
+  gql`${Recording}`,
+  gql`${Category}`,
+  gql`${Library}`,
+  gql`${Themes}`,
+  gql`${Participants}`,
+  gql`${Accounts}`,
+  gql`${Comments}`,
+  gql`${User}`,
+  gql`${Reaction}`,
+  gql`${Transcription}`,
+  gql`${Talktime}`,
+  gql`${Questions}`,
+  gql`${Departments}`,
+  gql`${Notification}`,
+  gql`${Empty}`
 ];
