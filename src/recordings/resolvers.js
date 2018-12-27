@@ -1,5 +1,12 @@
+import {PubSub} from 'apollo-server'
 import { MockList } from "graphql-tools";
 import { categories, libraries } from "./dataSource";
+
+const pubsub = new PubSub()
+
+const SEND_NOTIFICATION = 'send-notification'
+
+export const publish = () => pubsub.publish(SEND_NOTIFICATION)
 
 const rootResolvers = {
   Query: {
@@ -33,7 +40,12 @@ const rootResolvers = {
       data: () => new MockList([1, count])
     })
   },
-  Mutation: {}
+  Mutation: {},
+  Subscription: {
+    newNotificationRecieved: {
+      subscribe: () => pubsub.asyncIterator(SEND_NOTIFICATION)
+    },
+  }
 };
 
 export default rootResolvers;

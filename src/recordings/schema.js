@@ -13,6 +13,7 @@ import Themes from "./components/themes";
 import Comments from "./components/comment";
 import Reaction from "./components/reaction";
 import Notification from "./components/notification";
+import Empty from "./components/empty";
 
 const typeDefs = gql`
   # the schema allows the following query:
@@ -44,6 +45,10 @@ const typeDefs = gql`
     changeLocale: Account,
     markNotificationAsRead(ids: [ID]): Notifications
   }
+
+  type Subscription {
+    newNotificationRecieved: ID
+  }
 `;
 
 export default [
@@ -60,5 +65,6 @@ export default [
   gql`${Transcription}`,
   gql`${Talktime}`,
   gql`${Questions}`,
-  gql`${Notification}`
+  gql`${Notification}`,
+  gql`${Empty}`
 ];

@@ -22,6 +22,7 @@ const baseSchema = [
     schema {
       query: Query,
       mutation: Mutation
+      subscription: Subscription
     }
     `
 ];
