@@ -10,6 +10,7 @@ import Participants from "./components/participants";
 import Themes from "./components/themes";
 import Comments from "./components/comment";
 import Reaction from "./components/reaction";
+import Departments from "./components/departments";
 
 const typeDefs = `
   # the schema allows the following query:
@@ -27,7 +28,8 @@ const typeDefs = `
     comments(count: Int=10, cursor: Int, recordingId: String!): Comments 
     recordings(count: Int=10, categoryId: Int, libraryId: [Int], accounts: [Int!], themes: [Int!], particpants: [Int!], count: Int=10, cursor: Int, date: [String!], query: [String!], sortType: String, sortOrder: String): Recordings    
     recording(id: String!):Recording
-    users(query: String, count: Int=10): Users
+    users(query: String, count: Int=10, cursor: Int,): Users
+    departments(query: String, count: Int=10, cursor: Int,): Departments 
   }
 
   # this schema allows the following mutation:
@@ -51,5 +53,6 @@ export default [
   Reaction,
   Transcription,
   Talktime,
-  Questions
+  Questions,
+  Departments
 ];

@@ -18,7 +18,7 @@ const rootResolvers = {
       data: () => new MockList([1, count])
     }),
     users: (_, {count}) => ({
-      data: () => new MockList([5, count])
+      data: () => new MockList([count, count])
     }),
     recordings: (_, { count }) => ({
       data: () => new MockList([8, 10])
