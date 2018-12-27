@@ -31,7 +31,7 @@ const typeDefs = gql`
     comments(count: Int=10, cursor: Int, recordingId: String!): Comments 
     recordings(count: Int=10, categoryId: Int, libraryId: [Int], accounts: [Int!], themes: [Int!], particpants: [Int!], count: Int=10, cursor: Int, date: [String!], query: [String!], sortType: String, sortOrder: String): Recordings    
     recording(id: String!):Recording
-    users(query: String, count: Int=10): Users
+    users(query: String, count: Int=10, cursor: Int): Users
     notifications(cursor: Int, count: Int=10): Notifications
   }
 
