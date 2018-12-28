@@ -31,6 +31,9 @@ export default {
   Reaction: () => ({
     type: casual.type
   }),
+  Theme: () => ({
+    keywords: ()=> new MockList([3,10])
+  }),
   Recording: () => ({
     sharedWith: () => new MockList([3, 10]),
     libraries: () => new MockList([3, 10]),

@@ -21,7 +21,7 @@ const typeDefs = gql`
   extend type Query {
     theme(id: Int!): Theme
     company(domain: String!): Company
-    user: User   
+    user(id:String!): User   
     account(id: Int!): Account
     categories: [Category]
     themes(count: Int=10, cursor: Int, query: String): Themes
