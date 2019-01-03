@@ -1,11 +1,11 @@
 export default `
-  type Department {
+  type Designation {
     id: String!
     name: String!
   }
-  type Departments {
+  type Designations {
     cursor: Int!
     hasMore: Boolean!
-    data: [Department]
+    data: [Designation]
   }
 `;

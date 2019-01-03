@@ -3,7 +3,7 @@ export default `
     id: String!
     name: String!
     email: String!
-    designation: String!
+    designation: Designation!
     recordings: [Recording]
     pic: String
     manager: User,

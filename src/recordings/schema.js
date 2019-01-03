@@ -12,7 +12,7 @@ import Participants from "./components/participants";
 import Themes from "./components/themes";
 import Comments from "./components/comment";
 import Reaction from "./components/reaction";
-import Departments from "./components/departments";
+import Designations from "./components/designation";
 import Notification from "./components/notification";
 import Empty from "./components/empty";
 
@@ -33,7 +33,7 @@ const typeDefs = gql`
     recordings(count: Int=10, categoryId: Int, libraryId: [Int], accounts: [Int!], themes: [Int!], particpants: [Int!], count: Int=10, cursor: Int, date: [String!], query: [String!], sortType: String, sortOrder: String): Recordings    
     recording(id: String!):Recording
     users(query: String, count: Int=10, cursor: Int,): Users
-    departments(query: String, count: Int=10, cursor: Int,): Departments 
+    designations(query: String, count: Int=10, cursor: Int,): Designations 
     notifications(cursor: Int, count: Int=10): Notifications
   }
 
@@ -67,7 +67,7 @@ export default [
   gql`${Transcription}`,
   gql`${Talktime}`,
   gql`${Questions}`,
-  gql`${Departments}`,
+  gql`${Designations}`,
   gql`${Notification}`,
   gql`${Empty}`
 ];
