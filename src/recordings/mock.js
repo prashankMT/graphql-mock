@@ -37,6 +37,15 @@ export default {
   Recording: () => ({
     sharedWith: () => new MockList([3, 10]),
     libraries: () => new MockList([3, 10]),
+    videoUrls: () => [{
+      id: '1234321',
+      src: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+      label: '360'
+    }, {
+      id: '1234323',
+      src: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+      label: '720'
+    }],
     themes: () => new MockList([3, 10]),
     transcription: ()=> new MockList([5, 20]),
     date: casual._unix_time,

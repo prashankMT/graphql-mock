@@ -1,4 +1,9 @@
 export default `
+  type Video {
+    id: ID!
+    src: String!
+    label: String
+  }
   type SpeakingEvent{
     start: Int!
     end: Int
@@ -6,6 +11,7 @@ export default `
   }
   type Recording {
     id: ID!
+    videoUrls: [Video!]
     title: String!
     account: Account!
     sharedWith: [User]
